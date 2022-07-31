@@ -3,8 +3,11 @@
 
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
    // Here is the HTML formatting for our mission target div.
-   const mission = document.getElementById("missionTarget");
-   mission.innerHTML = `
+   document = window.document;
+   let mission = document.getElementById("missionTarget");
+   let json = myFetch();
+   let i = 3;
+        mission.innerHTML = `
                 <h2>Mission Destination</h2>
                 <ol>
                     <li>Name: ${json.name}</li>

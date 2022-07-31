@@ -4,7 +4,6 @@
 
 window.addEventListener("load", function(){
     let document = window.document;
-    //element.style.visibility = 'hidden';
     formSubmission(document);
 
 
@@ -19,7 +18,7 @@ window.addEventListener("load", function(){
 
        // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
        listedPlanets = listedPlanets[pickPlanet()];
-       addDestinationInfo(listedPlanets);
+       addDestinationInfo();
     })
   
 });
