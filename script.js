@@ -7,18 +7,17 @@ window.addEventListener("load", function(){
     formSubmission(document);
 
 
-   let listedPlanets;
+   let listedPlanet;
    
    let listedPlanetsResponse = myFetch();
    listedPlanetsResponse.then(function (result) {
-       listedPlanets = result;
-       console.log(listedPlanets);
+       listedPlanet = result;
    }).then(function () {
-       console.log(listedPlanets);
 
        // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
-       listedPlanets = listedPlanets[pickPlanet()];
-       addDestinationInfo();
+       listedPlanet = listedPlanet[pickPlanet()];
+       console.log(listedPlanet.image);
+       addDestinationInfo(document, listedPlanet.name, listedPlanet.diameter, listedPlanet.star, listedPlanet.distance, listedPlanet.moons, listedPlanet.image)
     })
   
 });
