@@ -15,6 +15,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
                 </ol>
                 <img src="${json.image}">
     `;
+    
 };
 
 
